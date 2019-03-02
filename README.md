@@ -1,5 +1,5 @@
 # Sample ASP.NET Core application for Azure Pipelines docs
-
+[![Build Status](https://dev.azure.com/JMUSIC/U01D1-Azure-Devops/_apis/build/status/U01D1-Azure-Devops-ASP.NET%20Core%20(.NET%20Framework)-CI?branchName=master)](https://dev.azure.com/JMUSIC/U01D1-Azure-Devops/_build/latest?definitionId=3&branchName=master)
 For information on how to use this repository, see [.NET Core](https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core).
 
 | Example | Build status |

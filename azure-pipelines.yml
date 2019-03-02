@@ -46,6 +46,6 @@ steps:
 
   - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: '<jmusic@capellauniversity.edu>'
+    azureSubscription: '<Azure for Students>'
     WebAppName: '<U08D1-Azure-Devops-Deployment>'
     Package: $(System.ArtifactsDirectory)/**/*.zip

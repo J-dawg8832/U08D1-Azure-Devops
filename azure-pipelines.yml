@@ -20,3 +20,26 @@ steps:
     testResultsFiles: '**/*.trx'
 
 - task: PublishBuildArtifacts@1
+
+- script: dotnet build # Include additional options such as --configuration to meet your need
+- script: dotnet tool install -g dotnetsay
+- script: dotnetsay
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+    
+    - task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
+    
+    - task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
